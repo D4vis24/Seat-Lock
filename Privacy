@@ -1,0 +1,80 @@
+# Privacy Policy
+
+**Last Updated: January 14, 2025**
+
+## Overview
+
+SeatLock ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
+
+## Information We Collect
+
+### Information You Provide
+- **Account Information**: Target airline selection, interview date, and practice preferences
+- **Practice Data**: Your responses to practice questions, scores, and progress tracking
+- **Voice Data**: When using voice practice features, audio is processed locally on your device for transcription
+
+### Automatically Collected Information
+- **Usage Data**: App feature usage, session duration, and practice statistics
+- **Device Information**: Device type, operating system version, and app version
+
+## How We Use Your Information
+
+We use your information to:
+- Provide personalized interview practice experience
+- Track your progress and provide performance insights
+- Improve app features and user experience
+- Provide AI-powered feedback on your practice responses
+
+## Data Storage
+
+- **Local Storage**: All practice data, preferences, and progress are stored locally on your device using Apple's SwiftData framework
+- **Cloud Processing**: When using AI grading features, your practice responses are sent to our secure servers for analysis. We do not store these responses after processing.
+
+## Third-Party Services
+
+### AI Grading (Claude API)
+We use Anthropic's Claude API to provide AI-powered feedback on your practice responses. Your responses are:
+- Transmitted securely via HTTPS
+- Not stored by Anthropic after processing
+- Used only to generate feedback for your practice session
+
+### Apple Services
+- **Speech Recognition**: Voice input is processed using Apple's on-device speech recognition
+- **App Store**: Purchase transactions are processed through Apple's App Store
+
+## Data Sharing
+
+We do **not**:
+- Sell your personal information
+- Share your data with third parties for marketing purposes
+- Access your responses for any purpose other than providing the service
+
+## Your Rights
+
+You can:
+- **Delete Your Data**: Use the "Reset All Progress" option in Settings to delete all local data
+- **Export Your Data**: Contact us for a copy of your data
+- **Opt Out**: Disable specific features like voice practice at any time
+
+## Children's Privacy
+
+SeatLock is not intended for children under 13. We do not knowingly collect information from children under 13.
+
+## Security
+
+We implement industry-standard security measures including:
+- HTTPS encryption for all network communications
+- Local data encryption using iOS security features
+- No storage of sensitive credentials on our servers
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Last Updated" date.
+
+## Contact Us
+
+If you have questions about this Privacy Policy, please open an issue at: https://github.com/D4vis24/Seat-Lock/issues
+
+---
+
+By using SeatLock, you agree to the collection and use of information in accordance with this Privacy Policy.
