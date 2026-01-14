@@ -1,80 +1,108 @@
-# Privacy Policy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SeatLock</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        h1 { color: #1a1a1a; border-bottom: 2px solid #007AFF; padding-bottom: 10px; }
+        h2 { color: #007AFF; margin-top: 30px; }
+        h3 { color: #555; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        strong { color: #1a1a1a; }
+        hr { border: none; border-top: 1px solid #ddd; margin: 30px 0; }
+        .update-date { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="update-date"><strong>Last Updated: January 14, 2025</strong></p>
 
-**Last Updated: January 14, 2025**
+    <h2>Overview</h2>
+    <p>SeatLock ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
 
-## Overview
+    <h2>Information We Collect</h2>
+    
+    <h3>Information You Provide</h3>
+    <ul>
+        <li><strong>Account Information:</strong> Target airline selection, interview date, and practice preferences</li>
+        <li><strong>Practice Data:</strong> Your responses to practice questions, scores, and progress tracking</li>
+        <li><strong>Voice Data:</strong> When using voice practice features, audio is processed locally on your device for transcription</li>
+    </ul>
 
-SeatLock ("we", "our", or "the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
+    <h3>Automatically Collected Information</h3>
+    <ul>
+        <li><strong>Usage Data:</strong> App feature usage, session duration, and practice statistics</li>
+        <li><strong>Device Information:</strong> Device type, operating system version, and app version</li>
+    </ul>
 
-## Information We Collect
+    <h2>How We Use Your Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+        <li>Provide personalized interview practice experience</li>
+        <li>Track your progress and provide performance insights</li>
+        <li>Improve app features and user experience</li>
+        <li>Provide AI-powered feedback on your practice responses</li>
+    </ul>
 
-### Information You Provide
-- **Account Information**: Target airline selection, interview date, and practice preferences
-- **Practice Data**: Your responses to practice questions, scores, and progress tracking
-- **Voice Data**: When using voice practice features, audio is processed locally on your device for transcription
+    <h2>Data Storage</h2>
+    <ul>
+        <li><strong>Local Storage:</strong> All practice data, preferences, and progress are stored locally on your device using Apple's SwiftData framework</li>
+        <li><strong>Cloud Processing:</strong> When using AI grading features, your practice responses are sent to our secure servers for analysis. We do not store these responses after processing.</li>
+    </ul>
 
-### Automatically Collected Information
-- **Usage Data**: App feature usage, session duration, and practice statistics
-- **Device Information**: Device type, operating system version, and app version
+    <h2>Third-Party Services</h2>
+    
+    <h3>AI Grading (Claude API)</h3>
+    <p>We use Anthropic's Claude API to provide AI-powered feedback on your practice responses. Your responses are:</p>
+    <ul>
+        <li>Transmitted securely via HTTPS</li>
+        <li>Not stored by Anthropic after processing</li>
+        <li>Used only to generate feedback for your practice session</li>
+    </ul>
 
-## How We Use Your Information
+    <h3>Apple Services</h3>
+    <ul>
+        <li><strong>Speech Recognition:</strong> Voice input is processed using Apple's on-device speech recognition</li>
+        <li><strong>App Store:</strong> Purchase transactions are processed through Apple's App Store</li>
+    </ul>
 
-We use your information to:
-- Provide personalized interview practice experience
-- Track your progress and provide performance insights
-- Improve app features and user experience
-- Provide AI-powered feedback on your practice responses
+    <h2>Data Sharing</h2>
+    <p>We do <strong>not</strong>:</p>
+    <ul>
+        <li>Sell your personal information</li>
+        <li>Share your data with third parties for marketing purposes</li>
+        <li>Access your responses for any purpose other than providing the service</li>
+    </ul>
 
-## Data Storage
+    <h2>Your Rights</h2>
+    <p>You can:</p>
+    <ul>
+        <li><strong>Delete Your Data:</strong> Use the "Reset All Progress" option in Settings to delete all local data</li>
+        <li><strong>Export Your Data:</strong> Contact us for a copy of your data</li>
+        <li><strong>Opt Out:</strong> Disable specific features like voice practice at any time</li>
+    </ul>
 
-- **Local Storage**: All practice data, preferences, and progress are stored locally on your device using Apple's SwiftData framework
-- **Cloud Processing**: When using AI grading features, your practice responses are sent to our secure servers for analysis. We do not store these responses after processing.
+    <h2>Children's Privacy</h2>
+    <p>SeatLock is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
 
-## Third-Party Services
+    <h2>Security</h2>
+    <p>We implement industry-standard security measures including:</p>
+    <ul>
+        <li>HTTPS encryption for all network communications</li>
+        <li>Local data encryption using iOS security features</li>
+        <li>No storage of sensitive credentials on our servers</li>
+    </ul>
 
-### AI Grading (Claude API)
-We use Anthropic's Claude API to provide AI-powered feedback on your practice responses. Your responses are:
-- Transmitted securely via HTTPS
-- Not stored by Anthropic after processing
-- Used only to generate feedback for your practice session
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Last Updated" date.</p>
 
-### Apple Services
-- **Speech Recognition**: Voice input is processed using Apple's on-device speech recognition
-- **App Store**: Purchase transactions are processed through Apple's App Store
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please open an issue at: <a href="https://github.com/D4vis24/Seat-Lock/issues">https://github.com/D4vis24/Seat-Lock/issues</a></p>
 
-## Data Sharing
-
-We do **not**:
-- Sell your personal information
-- Share your data with third parties for marketing purposes
-- Access your responses for any purpose other than providing the service
-
-## Your Rights
-
-You can:
-- **Delete Your Data**: Use the "Reset All Progress" option in Settings to delete all local data
-- **Export Your Data**: Contact us for a copy of your data
-- **Opt Out**: Disable specific features like voice practice at any time
-
-## Children's Privacy
-
-SeatLock is not intended for children under 13. We do not knowingly collect information from children under 13.
-
-## Security
-
-We implement industry-standard security measures including:
-- HTTPS encryption for all network communications
-- Local data encryption using iOS security features
-- No storage of sensitive credentials on our servers
-
-## Changes to This Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Last Updated" date.
-
-## Contact Us
-
-If you have questions about this Privacy Policy, please open an issue at: https://github.com/D4vis24/Seat-Lock/issues
-
----
-
-By using SeatLock, you agree to the collection and use of information in accordance with this Privacy Policy.
+    <hr>
+    <p>By using SeatLock, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+</body>
+</html>
