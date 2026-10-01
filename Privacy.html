@@ -15,15 +15,21 @@
         .update-box { background: white; padding: 15px 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .update-box strong { color: #1a365d; }
         h2 { color: #1a365d; font-size: 1.4em; margin: 30px 0 15px 0; padding-bottom: 10px; border-bottom: 3px solid #3182ce; }
+        .section h2 { margin-top: 0; }
         h3 { color: #1a365d; margin: 15px 0 10px 0; }
         p { margin-bottom: 15px; color: #555; }
         .highlight-box { background: linear-gradient(135deg, #e6ffed 0%, #c6f6d5 100%); border-left: 4px solid #38a169; padding: 20px; border-radius: 0 12px 12px 0; margin: 20px 0; }
-        .highlight-box h3 { color: #276749; margin-bottom: 10px; }
-        .highlight-box p { color: #2f855a; margin: 0; }
+        .highlight-box h3 { color: #276749; margin-top: 0; margin-bottom: 10px; }
+        .highlight-box ul { margin-bottom: 0; }
+        .highlight-box li { color: #2f855a; }
         ul { padding-left: 20px; margin-bottom: 15px; }
         li { margin-bottom: 10px; color: #555; }
         li strong { color: #1a365d; }
         .section { background: white; padding: 25px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.95em; }
+        th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #e2e8f0; color: #555; vertical-align: top; }
+        th { color: #1a365d; }
         .footer { text-align: center; padding: 30px; color: #666; font-size: 0.9em; }
         a { color: #3182ce; }
     </style>
@@ -37,97 +43,123 @@
 
     <div class="container">
         <div class="update-box">
-            <strong>Last Updated:</strong> January 14, 2025
+            <strong>Last Updated:</strong> September 30, 2026
         </div>
 
         <h2>Introduction</h2>
-        <p>SeatLock ("the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        <p>SeatLock ("the App", "we") helps pilots prepare for airline interviews. This policy explains what the App stores, what leaves your device, and the choices you have.</p>
 
         <div class="highlight-box">
             <h3>🛡️ Privacy at a Glance</h3>
-            <p>Your data stays on your device. We don't collect, store, or share your personal information with third parties.</p>
-        </div>
-
-        <div class="section">
-            <h2>Information We Collect</h2>
-            <h3>Information You Provide</h3>
             <ul>
-                <li><strong>Practice Preferences:</strong> Target airline selection, interview date, and daily goals</li>
-                <li><strong>Practice Data:</strong> Your responses to practice questions, scores, and progress tracking</li>
-                <li><strong>Voice Data:</strong> When using voice practice features, audio is processed locally on your device</li>
-            </ul>
-            <h3>Automatically Collected</h3>
-            <ul>
-                <li><strong>Usage Data:</strong> App feature usage, session duration, and practice statistics (stored locally only)</li>
-                <li><strong>Device Information:</strong> Device type and OS version for compatibility</li>
+                <li>Your practice history, scores, and recordings are stored on your device. SeatLock has no accounts and no database of users.</li>
+                <li>AI feedback is optional. If you allow it, the text of your answer is sent through SeatLock's server to Anthropic's Claude AI to grade it. Your voice recordings are not sent.</li>
+                <li>We don't sell your data, show ads, use third-party analytics, or track you across apps and websites.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>How We Use Your Information</h2>
+            <h2>Information Stored on Your Device</h2>
             <ul>
-                <li>Provide personalized interview practice experience</li>
-                <li>Track your progress and provide performance insights</li>
-                <li>Generate AI-powered feedback on your practice responses</li>
-                <li>Improve app features and user experience</li>
+                <li><strong>Profile and preferences:</strong> target airline, interview date, daily goal, the first name you enter (used only for spoken greetings), and voice settings.</li>
+                <li><strong>Practice data:</strong> your recorded answers, their transcripts, scores, feedback, progress, streaks, achievements, and saved tips.</li>
             </ul>
+            <p>This data is stored only on your device. It isn't sent to us, and it isn't synced to iCloud by the App.</p>
         </div>
 
         <div class="section">
-            <h2>Data Storage</h2>
+            <h2>Information That Leaves Your Device</h2>
+
+            <h3>AI feedback and Ask George (only if you allow AI feedback)</h3>
+            <p>The App asks for your permission before it sends anything to an AI service. If you allow it, each AI-graded answer sends:</p>
             <ul>
-                <li><strong>Local Storage:</strong> All practice data, preferences, and progress are stored locally on your device using Apple's SwiftData framework</li>
-                <li><strong>Cloud Processing:</strong> When using AI grading, your responses are sent securely for analysis but are NOT stored after processing</li>
+                <li>the text transcript of your answer and how long you spoke;</li>
+                <li>the question, its category, and reference material for that question;</li>
+                <li>your target airline and its published values;</li>
+                <li>a summary of your recent practice (average score, number of sessions, trend, and recent improvement notes).</li>
             </ul>
+            <p>Ask George sends the question you type or speak and your target airline.</p>
+            <p>This information is sent over HTTPS to SeatLock's server (hosted on Cloudflare), which forwards it to <strong>Anthropic's Claude API</strong> and returns the feedback. Your name, email, contact details, and voice recordings are not sent.</p>
+            <p>You can turn AI feedback off at any time in <strong>Settings &gt; AI Features</strong>. When it's off, answers get an estimate calculated on your device and nothing is sent to an AI service.</p>
+
+            <h3>Anonymous device identifier</h3>
+            <p>AI grading requests include Apple's anonymous app-specific device identifier (identifierForVendor) so the server can enforce daily usage limits. The server stores a count of AI grades for that identifier and deletes it automatically within 2 days. The identifier can't be used to identify you and isn't linked to your name, Apple ID, or answers.</p>
+
+            <h3>Speech recognition (Apple)</h3>
+            <p>Turning your spoken answers into text uses Apple's Speech framework. Depending on your device and settings, Apple may process the audio on its servers. Apple's handling is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+
+            <h3>Question audio (OpenAI)</h3>
+            <p>When the natural "Alex" voice reads a question aloud, the question's text is sent through SeatLock's server to <strong>OpenAI's text-to-speech API</strong>. Only the question text is sent, never your answers or personal information. Generated audio is cached on your device. The optional voice pack downloads from our content server (Cloudflare R2).</p>
+
+            <h3>Purchases (Apple)</h3>
+            <p>Subscriptions and purchases are processed by Apple. We never receive your payment information.</p>
+
+            <h3>Notifications</h3>
+            <p>Practice reminders are scheduled on your device. No notification data is sent to us.</p>
         </div>
 
         <div class="section">
-            <h2>Third-Party Services</h2>
-            <h3>AI Grading (Claude API)</h3>
-            <p>We use Anthropic's Claude API for AI-powered feedback. Your responses are:</p>
+            <h2>What Our Server Keeps</h2>
+            <p>SeatLock's server does not store your answers, transcripts, or questions. It passes each request to the AI provider and returns the result. It keeps only:</p>
             <ul>
-                <li>Transmitted securely via HTTPS</li>
-                <li>Not stored by Anthropic after processing</li>
-                <li>Used only to generate feedback for your session</li>
+                <li>the daily AI-grade count per anonymous device identifier, deleted within 2 days;</li>
+                <li>short-lived request counts per IP address, held in memory to prevent abuse.</li>
             </ul>
-            <h3>Apple Services</h3>
-            <ul>
-                <li><strong>Speech Recognition:</strong> Processed using Apple's on-device speech recognition</li>
-                <li><strong>App Store:</strong> Purchases processed through Apple's App Store</li>
-            </ul>
+            <p>Cloudflare, which hosts the server, may process IP addresses and request metadata for security and operations under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Service Providers</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Provider</th><th>Purpose</th><th>Data received</th></tr>
+                    <tr><td>Anthropic</td><td>AI feedback and Ask George</td><td>Answer transcripts, questions, airline context, practice summary</td></tr>
+                    <tr><td>OpenAI</td><td>Question audio</td><td>Question text only</td></tr>
+                    <tr><td>Cloudflare</td><td>Hosts SeatLock's server and voice pack</td><td>Requests in transit, IP address, anonymous device identifier</td></tr>
+                    <tr><td>Apple</td><td>Speech recognition, App Store purchases</td><td>Audio for transcription, purchase details</td></tr>
+                </table>
+            </div>
+            <p>Under their commercial API terms, Anthropic and OpenAI do not use API data to train their models. They keep it only for a limited period (generally up to 30 days) for safety and abuse monitoring, or longer if required by law or a policy violation. See <a href="https://privacy.anthropic.com">Anthropic's Privacy Center</a> and <a href="https://openai.com/enterprise-privacy/">OpenAI's API data policy</a>.</p>
         </div>
 
         <div class="section">
             <h2>Data Sharing</h2>
             <p>We do <strong>NOT</strong>:</p>
             <ul>
-                <li>Sell your personal information</li>
-                <li>Share your data with third parties for marketing</li>
-                <li>Access your responses for any purpose other than providing the service</li>
+                <li>Sell or rent your information</li>
+                <li>Share it for advertising or marketing</li>
+                <li>Use third-party analytics or tracking SDKs</li>
+                <li>Use your answers for anything other than giving you feedback</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Your Rights</h2>
+            <h2>Your Choices</h2>
             <ul>
-                <li><strong>Delete Your Data:</strong> Use "Reset All Progress" in Settings to delete all local data</li>
-                <li><strong>Export Your Data:</strong> Contact us for a copy of your data</li>
-                <li><strong>Opt Out:</strong> Disable specific features like voice practice at any time</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Security</h2>
-            <ul>
-                <li>HTTPS encryption for all network communications</li>
-                <li>Local data encryption using iOS security features</li>
-                <li>No storage of sensitive credentials on our servers</li>
+                <li><strong>AI feedback:</strong> turn it on or off in Settings &gt; AI Features.</li>
+                <li><strong>Microphone and speech recognition:</strong> allow or deny in the iOS Settings app.</li>
+                <li><strong>Notifications:</strong> turn them off in the iOS Settings app.</li>
+                <li><strong>Delete your data:</strong> "Reset All Progress" in Settings deletes your saved practice sessions. Deleting the App removes all SeatLock data from your device. Because we don't keep your answers on our server, there is nothing for us to delete there.</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Children's Privacy</h2>
-            <p>SeatLock is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
+            <p>SeatLock is intended for adults preparing for airline pilot interviews and is not directed to children under 13. We don't knowingly collect information from children under 13.</p>
+        </div>
+
+        <div class="section">
+            <h2>Security</h2>
+            <ul>
+                <li>All network requests use HTTPS</li>
+                <li>AI and voice service keys are stored on SeatLock's server, never in the App</li>
+                <li>Data on your device is protected by iOS security features</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Changes to This Policy</h2>
+            <p>We'll update this page and the "Last Updated" date when the policy changes. If a change affects what leaves your device, we'll also tell you in the App.</p>
         </div>
 
         <div class="section">
@@ -138,7 +170,7 @@
 
         <div class="footer">
             <p>By using SeatLock, you agree to this Privacy Policy.</p>
-            <p style="margin-top: 10px;">© 2025 SeatLock. All rights reserved.</p>
+            <p style="margin-top: 10px;">© 2026 SeatLock. All rights reserved.</p>
         </div>
     </div>
 </body>
