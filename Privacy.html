@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="update-box">
-            <strong>Last Updated:</strong> September 30, 2026
+            <strong>Last Updated:</strong> October 3, 2026
         </div>
 
         <h2>Introduction</h2>
@@ -53,6 +53,7 @@
             <h3>🛡️ Privacy at a Glance</h3>
             <ul>
                 <li>Your practice history, scores, and recordings are stored on your device. SeatLock has no accounts and no database of users.</li>
+                <li>The one thing stored on our server is what you choose to share with other pilots: reviews of airlines and their interviews, and anonymous interview debriefs. They carry no name or contact details.</li>
                 <li>AI feedback is optional. If you allow it, the text of your answer is sent through SeatLock's server to Anthropic's Claude AI to grade it. Your voice recordings are not sent.</li>
                 <li>We don't sell your data, show ads, use third-party analytics, or track you across apps and websites.</li>
             </ul>
@@ -83,7 +84,7 @@
             <p>You can turn AI feedback off at any time in <strong>Settings &gt; AI Features</strong>. When it's off, answers get an estimate calculated on your device and nothing is sent to an AI service.</p>
 
             <h3>Anonymous device identifier</h3>
-            <p>AI grading requests include Apple's anonymous app-specific device identifier (identifierForVendor) so the server can enforce daily usage limits. The server stores a count of AI grades for that identifier and deletes it automatically within 2 days. The identifier can't be used to identify you and isn't linked to your name, Apple ID, or answers.</p>
+            <p>Requests to our server (AI grading, Ask George, question audio and pilot reviews) include Apple's anonymous app-specific device identifier (identifierForVendor) so the server can enforce daily usage limits and allow one review per device per airline. The server stores daily usage counts for that identifier and deletes them automatically within 2 days. With reviews and debriefs it stores only a salted hash of the identifier, never the identifier itself. The identifier can't be used to identify you and isn't linked to your name, Apple ID, or answers.</p>
 
             <h3>Speech recognition (Apple)</h3>
             <p>Turning your spoken answers into text uses Apple's Speech framework. Depending on your device and settings, Apple may process the audio on its servers. Apple's handling is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
@@ -95,15 +96,21 @@
             <p>Subscriptions and purchases are processed by Apple. We never receive your payment information.</p>
 
             <h3>Notifications</h3>
-            <p>Practice reminders are scheduled on your device. No notification data is sent to us.</p>
+            <p>Practice reminders and the Question of the Day are scheduled on your device. No notification data is sent to us.</p>
+
+            <h3>Pilot reviews and debriefs (only what you choose to post)</h3>
+            <p>If you post a review of an airline or of its interview, the review's text and ratings are stored on SeatLock's server and shown to other users of the App, anonymously. Reviews are held for moderation before they appear, can be reported by other users, and you can edit or delete your own review at any time from inside the App. Other users' reports and "helpful" votes are stored against a salted hash of their device identifier, so a device can vote once. Don't include your name, contact details or anything that identifies another person; the server rejects links, email addresses and phone numbers.</p>
+            <p>After an interview, you can share an anonymous debrief: the airline, the month, the outcome and which questions from the bank came up. Nothing free-text is shared. This is on by default in the debrief form, can be turned off there, and feeds the "Asked recently" summary other pilots see. You can withdraw it from inside the App.</p>
         </div>
 
         <div class="section">
             <h2>What Our Server Keeps</h2>
             <p>SeatLock's server does not store your answers, transcripts, or questions. It passes each request to the AI provider and returns the result. It keeps only:</p>
             <ul>
-                <li>the daily AI-grade count per anonymous device identifier, deleted within 2 days;</li>
-                <li>short-lived request counts per IP address, held in memory to prevent abuse.</li>
+                <li>the daily AI-grade, Ask George and question-audio counts per anonymous device identifier, deleted within 2 days;</li>
+                <li>short-lived request counts per IP address, held in memory to prevent abuse;</li>
+                <li>the pilot reviews and anonymous debriefs you choose to post, with a salted hash of your device identifier so you can edit or delete them, until you delete them or we remove them;</li>
+                <li>reports and "helpful" votes on reviews, and the hashes of devices blocked from posting, kept as salted hashes only.</li>
             </ul>
             <p>Cloudflare, which hosts the server, may process IP addresses and request metadata for security and operations under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</p>
         </div>
@@ -115,7 +122,7 @@
                     <tr><th>Provider</th><th>Purpose</th><th>Data received</th></tr>
                     <tr><td>Anthropic</td><td>AI feedback and Ask George</td><td>Answer transcripts, questions, airline context, practice summary</td></tr>
                     <tr><td>OpenAI</td><td>Question audio</td><td>Question text only</td></tr>
-                    <tr><td>Cloudflare</td><td>Hosts SeatLock's server and voice pack</td><td>Requests in transit, IP address, anonymous device identifier</td></tr>
+                    <tr><td>Cloudflare</td><td>Hosts SeatLock's server and the reviews database</td><td>Requests in transit, IP address, anonymous device identifier, posted reviews and debriefs</td></tr>
                     <tr><td>Apple</td><td>Speech recognition, App Store purchases</td><td>Audio for transcription, purchase details</td></tr>
                 </table>
             </div>
