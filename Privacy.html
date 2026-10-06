@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="update-box">
-            <strong>Last Updated:</strong> October 3, 2026
+            <strong>Last Updated:</strong> October 6, 2026
         </div>
 
         <h2>Introduction</h2>
@@ -54,7 +54,7 @@
             <ul>
                 <li>Your practice history, scores, and recordings are stored on your device. SeatLock has no accounts and no database of users.</li>
                 <li>The one thing stored on our server is what you choose to share with other pilots: reviews of airlines and their interviews, and anonymous interview debriefs. They carry no name or contact details.</li>
-                <li>AI feedback is optional. If you allow it, the text of your answer is sent through SeatLock's server to Anthropic's Claude AI to grade it. Your voice recordings are not sent.</li>
+                <li>AI feedback is optional. If you allow it, the text of your answer is sent through SeatLock's server to a third-party AI service to grade it. Your voice recordings are not sent.</li>
                 <li>We don't sell your data, show ads, use third-party analytics, or track you across apps and websites.</li>
             </ul>
         </div>
@@ -80,7 +80,7 @@
                 <li>a summary of your recent practice (average score, number of sessions, trend, and recent improvement notes).</li>
             </ul>
             <p>Ask George sends the question you type or speak and your target airline.</p>
-            <p>This information is sent over HTTPS to SeatLock's server (hosted on Cloudflare), which forwards it to <strong>Anthropic's Claude API</strong> and returns the feedback. Your name, email, contact details, and voice recordings are not sent.</p>
+            <p>This information is sent over HTTPS to SeatLock's server (hosted on Cloudflare), which forwards it to <strong>a third-party AI service</strong> and returns the feedback. Your name, email, contact details, and voice recordings are not sent.</p>
             <p>You can turn AI feedback off at any time in <strong>Settings &gt; AI Features</strong>. When it's off, answers get an estimate calculated on your device and nothing is sent to an AI service.</p>
 
             <h3>Anonymous device identifier</h3>
@@ -89,8 +89,8 @@
             <h3>Speech recognition (Apple)</h3>
             <p>Turning your spoken answers into text uses Apple's Speech framework. Depending on your device and settings, Apple may process the audio on its servers. Apple's handling is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-            <h3>Question audio (OpenAI)</h3>
-            <p>When the natural "Alex" voice reads a question aloud, the question's text is sent through SeatLock's server to <strong>OpenAI's text-to-speech API</strong>. Only the question text is sent, never your answers or personal information. Generated audio is cached on your device. The optional voice pack downloads from our content server (Cloudflare R2).</p>
+            <h3>Question audio (text-to-speech)</h3>
+            <p>When the natural "Alex" voice reads a question aloud, the question's text is sent through SeatLock's server to <strong>a third-party text-to-speech service</strong>. Only the question text is sent, never your answers or personal information. Generated audio is cached on your device. The optional voice pack downloads from our content server (Cloudflare R2).</p>
 
             <h3>Purchases (Apple)</h3>
             <p>Subscriptions and purchases are processed by Apple. We never receive your payment information.</p>
@@ -120,13 +120,13 @@
             <div class="table-wrap">
                 <table>
                     <tr><th>Provider</th><th>Purpose</th><th>Data received</th></tr>
-                    <tr><td>Anthropic</td><td>AI feedback and Ask George</td><td>Answer transcripts, questions, airline context, practice summary</td></tr>
-                    <tr><td>OpenAI</td><td>Question audio</td><td>Question text only</td></tr>
+                    <tr><td>AI feedback provider</td><td>AI feedback and Ask George</td><td>Answer transcripts, questions, airline context, practice summary</td></tr>
+                    <tr><td>Text-to-speech provider</td><td>Question audio</td><td>Question text only</td></tr>
                     <tr><td>Cloudflare</td><td>Hosts SeatLock's server and the reviews database</td><td>Requests in transit, IP address, anonymous device identifier, posted reviews and debriefs</td></tr>
                     <tr><td>Apple</td><td>Speech recognition, App Store purchases</td><td>Audio for transcription, purchase details</td></tr>
                 </table>
             </div>
-            <p>Under their commercial API terms, Anthropic and OpenAI do not use API data to train their models. They keep it only for a limited period (generally up to 30 days) for safety and abuse monitoring, or longer if required by law or a policy violation. See <a href="https://privacy.anthropic.com">Anthropic's Privacy Center</a> and <a href="https://openai.com/enterprise-privacy/">OpenAI's API data policy</a>.</p>
+            <p>Our AI and text-to-speech providers process requests under commercial API terms that prohibit using the data to train their models. They keep it only for a limited period (generally up to 30 days) for safety and abuse monitoring, or longer if required by law or a policy violation. We can name the current providers on request.</p>
         </div>
 
         <div class="section">
